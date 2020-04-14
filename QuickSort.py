@@ -1,19 +1,20 @@
-def quick_sort(A):
-	quick_sort2(A, 0, len(A)-1)
-	
-def quick_sort2(A, low, hi):
-	if low < hi:
-		p = partition(A, low, hi)
-		quick_sort2(A, low, p - 1)
-		quick_sort2(A, p + 1, hi)
+def quick_sort(A, low=None, hi=None):
+    if low is None or hi is None:
+        quick_sort(A, 0, len(A)-1)
+    elif low < hi:
+	    p = partition(A, low, hi)
+	    quick_sort(A, low, p - 1)
+	    quick_sort(A, p + 1, hi)
 	
 def get_pivot(A, low, hi):
 	mid = (hi + low) // 2
 	s = sorted([A[low], A[mid], A[hi]])
+
 	if s[1] == A[low]:
 		return low
 	elif s[1] == A[mid]:
 		return mid
+
 	return hi
 	
 def partition(A, low, hi):
