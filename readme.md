@@ -24,7 +24,7 @@ Average case: O(n^2)
 # Quick Sort
 
 Quick sorting algorithm based on Joe James' video (https://www.youtube.com/watch?v=CB_NCoxzQnk)  
-I encourage you to watch his video for a very good explanation about how it works.
+I encourage you to watch his video for a very good explanation on how it works.
 
 ### Time complexity:  
 Best case: O(n logn)
